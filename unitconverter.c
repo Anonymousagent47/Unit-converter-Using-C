@@ -1,4 +1,4 @@
-#include<stdio.h>
+ #include<stdio.h>
 #include<math.h>
 int main(){
     int choice;
@@ -23,8 +23,11 @@ int main(){
     float kilotogram; //Kilo to Gram
     float km; //KM input
     float m; //M inout
+    float foot; // Foot input
     float kmtom; // Km to meter 
     float mtokm; //meter to km
+    float foottom; // Foot to Meter
+    float mtofoot; //Meter To Feet
 
 
 printf("\n");
@@ -124,7 +127,7 @@ printf("\n");
     }else if (choice == 4){
         printf("WELOCME TO LENGTH CONVERTER\n");
         printf("...........................\n\n");
-        printf("Make Your Choice:- \n1. KM To Meter\n2. Meter To KM\n");
+        printf("Make Your Choice:- \n1. KM To Meter\n2. Meter To KM\n3. Meter to Feet\n4. Feet To Meter\n");
         printf("Enter Your Choice: ");
         scanf("%d",&lc);
         if(lc == 1){
@@ -139,6 +142,18 @@ printf("\n");
             scanf("%f",&m);
             mtokm=m/1000;
             printf("Distance of %.2f Meter is %.2f KM",m,mtokm);
+        }else if(lc == 3){
+            printf("\nYou Choose Meter To Feet...\n");
+            printf("Enter Value of Meter: ");
+            scanf("%f",&m);
+            mtofoot=m*3.28;
+            printf("%.2f Meter is %.2f Foot",m,mtofoot);
+        }else if(lc == 4){
+            printf("\nYou Choose Foot To Meter...\n");
+            printf("Enter Value of Foot: ");
+            scanf("%f",&foot);
+            foottom=foot/3.28;
+            printf("%.2f Foot is %.2f Meter",foot,foottom);
         }else{
             printf("Enter Valid Value");
         }
